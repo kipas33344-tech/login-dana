@@ -1,69 +1,69 @@
-html
+```html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ALBUM DISCO DANGDUT 2025</title>
+  <title>Login BRI mo</title>
   <style>
     body {
-      background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4') no-repeat center/cover;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }.container {
-      background: rgba(0,0,0,0.7);
-      max-width: 500px;
-      margin: auto;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 0 15px #ffcc00;
+      margin: 0; padding: 0; font-family: Arial, sans-serif; background: #0078d7; color: #fff;
+      display: flex; justify-content: center; align-items: center; height: 100vh;
+    }.login-container {
+      background: #fff; color: #000; border-radius: 15px; width: 350px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3); padding: 30px;
+    }.login-header {
+      text-align: center; margin-bottom: 20px;
+    }.login-header img {
+      width: 80px; margin-bottom: 10px;
+    }.login-header h1 {
+      margin: 0; font-size: 24px; font-weight: bold; color: #0078d7;
+    }.input-group {
+      margin-bottom: 20px;
     }
-    h1 {
-      font-size: 36px;
-      color: #00ff00;
-      text-shadow: 2px 2px 4px #000;
-    }
-    h2 {
-      font-size: 28px;
-      color: orange;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 2px #000;
-    }
-    ul {
-      list-style:none;
-      padding-left: 0;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: left;
-      color: white;
-      text-shadow: 1px 1px 2px #000;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }.note {
-      color: #0f0;
-      font-weight: bold;
-      margin-top: 15px;
-      text-shadow: 1px 1px 3px #000;
+    input[type="text"], input[type="password"] {
+      width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;
+      font-size: 16px;
+    }.btn-login {
+      width: 100%; padding: 12px; background: #0078d7; border: none; border-radius: 8px;
+      color: #fff; font-weight: bold; font-size: 16px; cursor: pointer;
+      display: flex; justify-content: center; align-items: center;
+    }.btn-login:hover {
+      background: #005ea3;
+    }.fast-menu {
+      display: flex; justify-content: space-around; margin: 20px 0;
+    }.fast-menu div {
+      background: #cce5ff; padding: 10px 15px; border-radius: 8px; text-align: center;
+      flex: 1; margin: 0 5px; color: #0078d7; font-weight: bold; font-size: 14px;
+      cursor: pointer;
+    }.fast-menu div:hover {
+      background: #99ccff;
+    }.footer-icon {
+      margin-top: 10px; text-align: center;
+      font-size: 12px; color: #555;
+    }.fingerprint-icon {
+      margin-left: 10px;
+      width: 24px; height: 24px;
+      background: url('https://img.icons8.com/ios-filled/50/0078d7/fingerprint.png') no-repeat center/contain;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>ALBUM <span style="color:#00ccff">DISCO DANGDUT</span></h1>
-    <h2>ORGEN TUNGGAL 2025</h2>
-    <p>List Lagu:</p>
-    <ul>
-      <li>1. DITELAN ALAM</li>
-      <li>2. NASIB BUNGA</li>
-      <li>3. BADAI BIRU</li>
-      <li>4. BULAN DIRANTING CEMARA</li>
-      <li>5. BIMBANG</li>
-      <li>6. ANAK YANG MALANG</li>
-      <li>7. DENDAM KEBENCIAN</li>
-      <li>8. DERITA DIATAS DERITA</li>
-    </ul>
-    <p class="note">AUDIO JERNIH</p>
+  <div class="login-container">
+    <div class="login-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/BRI_logo.svg" alt="BRI Logo">
+      <h1>Hallo!</h1>
+    </div>
+    <div class="fast-menu">
+      <div>BRIVA</div>
+      <div>Transfer</div>
+      <div>Pulsa/Data</div>
+      <div>Edit</div>
+    </div>
+    <button class="btn-login">
+      Login
+      <div class="fingerprint-icon"></div>
+    </button>
   </div>
 </body>
 </html>
+``
