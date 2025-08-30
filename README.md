@@ -1,105 +1,69 @@
-```html
+html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login DANA Simulasi</title>
+  <title>ALBUM DISCO DANGDUT 2025</title>
   <style>
     body {
+      background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4') no-repeat center/cover;
       font-family: Arial, sans-serif;
-      max-width: 350px;
-      margin: 30px auto;
+      color: white;
+      text-align: center;
       padding: 20px;
-      border: 2px solid #007bff;
-      border-radius: 8px;
-      background: #f0f8ff;
+    }.container {
+      background: rgba(0,0,0,0.7);
+      max-width: 500px;
+      margin: auto;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px #ffcc00;
+    }
+    h1 {
+      font-size: 36px;
+      color: #00ff00;
+      text-shadow: 2px 2px 4px #000;
     }
     h2 {
-      text-align: center;
-      color: #007bff;
+      font-size: 28px;
+      color: orange;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #000;
     }
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 8px 6px;
-      margin: 6px 0 12px;
-      border: 1px solid #007bff;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    button {
-      width: 100%;
-      background-color: #007bff;
+    ul {
+      list-style:none;
+      padding-left: 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
       color: white;
-      padding: 10px 0;
-      border: none;
-      border-radius: 4px;
+      text-shadow: 1px 1px 2px #000;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }.note {
+      color: #0f0;
       font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #message {
       margin-top: 15px;
-      font-weight: bold;
-      text-align: center;
+      text-shadow: 1px 1px 3px #000;
     }
   </style>
 </head>
 <body>
-  <h2>Login DANA Simulasi</h2>
-  <label>Nomor HP:</label><br>
-  <input type="text" id="nomorHp" placeholder="Masukkan nomor HP"><br><br>
-  <button onclick="kirimOtp()">Kirim OTP</button>
-
-  <div id="otpSection" style="display:none; margin-top:20px;">
-    <label>Masukkan OTP:</label><br>
-    <input type="text" id="otp" placeholder="Kode OTP"><br><br>
-    <button onclick="cekOtp()">Verifikasi OTP</button>
+  <div class="container">
+    <h1>ALBUM <span style="color:#00ccff">DISCO DANGDUT</span></h1>
+    <h2>ORGEN TUNGGAL 2025</h2>
+    <p>List Lagu:</p>
+    <ul>
+      <li>1. DITELAN ALAM</li>
+      <li>2. NASIB BUNGA</li>
+      <li>3. BADAI BIRU</li>
+      <li>4. BULAN DIRANTING CEMARA</li>
+      <li>5. BIMBANG</li>
+      <li>6. ANAK YANG MALANG</li>
+      <li>7. DENDAM KEBENCIAN</li>
+      <li>8. DERITA DIATAS DERITA</li>
+    </ul>
+    <p class="note">AUDIO JERNIH</p>
   </div>
-
-  <div id="pinSection" style="display:none; margin-top:20px;">
-    <label>Masukkan PIN:</label><br>
-    <input type="password" id="pin" placeholder="PIN DANA"><br><br>
-    <button onclick="cekPin()">Login</button>
-  </div>
-
-  <p id="message" style="color:red;"></p>
-
-  <script>
-    function kirimOtp() {
-      const nomorHp = document.getElementById('nomorHp').value;
-      if (!nomorHp) {
-        document.getElementById('message').textContent = 'Masukkan nomor HP dulu ya.';
-        document.getElementById('message').style.color = 'red';
-        return;
-      }
-      document.getElementById('message').textContent = `Kode OTP sudah dikirim ke ${nomorHp} (simulasi).`;
-      document.getElementById('message').style.color = 'green';
-      document.getElementById('otpSection').style.display = 'block';
-    }
-
-    function cekOtp() {
-      const otp = document.getElementById('otp').value;
-      if (otp === '123456') {
-        document.getElementById('message').textContent = 'OTP benar! Masukkan PIN untuk login.';
-        document.getElementById('message').style.color = 'green';
-        document.getElementById('pinSection').style.display = 'block';
-      } else {
-        document.getElementById('message').textContent = 'OTP salah, coba lagi.';
-        document.getElementById('message').style.color = 'red';
-      }
-    }
-
-    function cekPin() {
-      const pin = document.getElementById('pin').value;
-      if (pin === '0000') {
-        document.getElementById('message').style.color = 'green';
-        document.getElementById('message').textContent = 'Login berhasil! Selamat datang di DANA.';
-      } else {
-        document.getElementById('message').style.color = 'red';
-        document.getElementById('message').textContent = 'PIN salah, coba lagi.';
-      }
-    }
-  </script>
 </body>
 </html>
